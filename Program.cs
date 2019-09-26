@@ -1,22 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace SwitchProjectWinForms
+namespace ForConsole7
 {
-    static class Program
+    class Program
     {
-        /// <summary>
-        /// Главная точка входа для приложения.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            int n = Convert.ToInt32(Console.ReadLine());
+            int k = Convert.ToInt32(Console.ReadLine());
+            int t = 1;
+            int s = 0;
+            for (int j = 1; j <= n; j++)
+            {
+                for (int i = 1; i <= k; i++)
+                {
+                    t = t * j;
+                }
+                s = s + t;
+                t = 1;
+            }
+            Console.WriteLine(s);
         }
     }
 }
